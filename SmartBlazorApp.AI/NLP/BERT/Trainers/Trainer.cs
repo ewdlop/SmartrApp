@@ -7,7 +7,7 @@ public class Trainer
 {
     private readonly MLContext _mlContext;
 
-    public Trainer()
+    public Trainer(int seed = 11)
     {
         _mlContext = new MLContext(11);
     }

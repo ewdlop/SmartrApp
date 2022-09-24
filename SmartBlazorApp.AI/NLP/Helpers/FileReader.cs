@@ -1,45 +1,24 @@
 ﻿namespace SmartBlazorApp.AI.NLP.Helpers;
 
-public static class FileReaderExtension
+public static class FileReader
 {
-    public static async IAsyncEnumerable<ReadOnlyMemory<char>> ReadLinesAsMemoryAsync(this string filename)
+    public static List<string> ReadFile(string filename)
     {
-        using StreamReader reader = new(filename);
-        string? line;
-        while ((line = await reader.ReadLineAsync()) is not null)
+        List<string> result = new();
+
+        using (StreamReader reader = new(filename))
         {
-            if (!string.IsNullOrWhiteSpace(line))
+            string? line;
+
+            while ((line = reader.ReadLine()) is not null)
             {
-                yield return line.AsMemory();
+                if (!string.IsNullOrWhiteSpace(line))
+                {
+                    result.Add(line);
+                }
             }
         }
-    }
 
-    public static async IAsyncEnumerable<string> ReadLinesAsync(this string filename)
-    {
-        using StreamReader reader = new(filename);
-        string? line;
-
-        while ((line = await reader.ReadLineAsync()) is not null)
-        {
-            if (!string.IsNullOrWhiteSpace(line))
-            {
-                yield return line;
-            }
-        }
-    }
-
-    public static IEnumerable<string> ReadLines(this string filename)
-    {
-        using StreamReader reader = new(filename);
-        string? line;
-
-        while ((line = reader.ReadLine()) is not null)
-        {
-            if (!string.IsNullOrWhiteSpace(line))
-            {
-                yield return line;
-            }
-        }
+        return result;
     }
 }

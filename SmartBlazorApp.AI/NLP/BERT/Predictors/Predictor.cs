@@ -1,18 +1,18 @@
-﻿using SmartBlazorApp.AI.NLP.BERT.DataModel;
+﻿using Microsoft.ML;
+using SmartBlazorApp.AI.NLP.BERT.DataModel;
 
 namespace SmartBlazorApp.AI.NLP.BERT.Predictors;
 
 public class Predictor
 {
-    private Microsoft.ML.MLContext _mLContext;
-    private Microsoft.ML.PredictionEngine<BertInput, BertPredictions> _predictionEngine;
+    private readonly MLContext _mLContext;
+    private PredictionEngine<BertInput, BertPredictions> _predictionEngine;
 
-    public Predictor(Microsoft.ML.ITransformer transformer)
+    public Predictor(ITransformer trainedModel)
     {
-        _mLContext = new Microsoft.ML.MLContext();
-        _predictionEngine = _mLContext.Model.CreatePredictionEngine<BertInput, BertPredictions>(transformer);
+        _mLContext = new MLContext();
+        _predictionEngine = _mLContext.Model.CreatePredictionEngine<BertInput, BertPredictions>(trainedModel);
     }
-    public BertPredictions Predict(BertInput encodedInput) 
-        => _predictionEngine.Predict(encodedInput);
 
+    public BertPredictions Predict(BertInput encodedInput) => _predictionEngine.Predict(encodedInput);
 }
