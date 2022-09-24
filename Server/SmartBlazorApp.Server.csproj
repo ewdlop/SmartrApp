@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Client\SmartBlazorApp.Client.csproj" />
-    <ProjectReference Include="..\Shared\SmartBlazorApp.Shared.csproj" />
+    <ProjectReference Include="..\Shared\SmartApp.Shared.csproj" />
   </ItemGroup>
 
 

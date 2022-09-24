@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartBlazorApp.Server", "Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartBlazorApp.Client", "Client\SmartBlazorApp.Client.csproj", "{D9D37488-C00D-4266-A28A-ED81269D2B33}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartBlazorApp.Shared", "Shared\SmartBlazorApp.Shared.csproj", "{DB684CDD-DBFA-480B-8003-238B18031639}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartApp.Shared", "Shared\SmartApp.Shared.csproj", "{DB684CDD-DBFA-480B-8003-238B18031639}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBlazorApp.AI", "SmartBlazorApp.AI\SmartBlazorApp.AI.csproj", "{BB298720-8FCD-4DD4-A716-8EE956CC2069}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartBlazorApp.Razor", "SmartBlazorApp.Razor\SmartBlazorApp.Razor.csproj", "{CBC7979A-1D43-4EDF-BEC2-AF995C1582F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBlazorApp.Graphic", "SmartBlazorApp.Graphic\SmartBlazorApp.Graphic.csproj", "{A9F15683-AEEA-4037-AE7C-4E3516E5C9DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartApp.AI", "SmartApp.AI\SmartApp.AI.csproj", "{09F70257-45D0-4530-B8B1-6C1A80F8FD2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBlazorApp.Razor", "SmartBlazorApp.Razor\SmartBlazorApp.Razor.csproj", "{CBC7979A-1D43-4EDF-BEC2-AF995C1582F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartApp.Graphic", "SmartApp.Graphic\SmartApp.Graphic.csproj", "{53867BAD-17EA-431F-B27E-74F1D9FAF91A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,18 +33,18 @@ Global
 		{DB684CDD-DBFA-480B-8003-238B18031639}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB684CDD-DBFA-480B-8003-238B18031639}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB684CDD-DBFA-480B-8003-238B18031639}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB298720-8FCD-4DD4-A716-8EE956CC2069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB298720-8FCD-4DD4-A716-8EE956CC2069}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB298720-8FCD-4DD4-A716-8EE956CC2069}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB298720-8FCD-4DD4-A716-8EE956CC2069}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9F15683-AEEA-4037-AE7C-4E3516E5C9DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9F15683-AEEA-4037-AE7C-4E3516E5C9DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9F15683-AEEA-4037-AE7C-4E3516E5C9DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9F15683-AEEA-4037-AE7C-4E3516E5C9DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CBC7979A-1D43-4EDF-BEC2-AF995C1582F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CBC7979A-1D43-4EDF-BEC2-AF995C1582F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBC7979A-1D43-4EDF-BEC2-AF995C1582F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBC7979A-1D43-4EDF-BEC2-AF995C1582F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09F70257-45D0-4530-B8B1-6C1A80F8FD2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09F70257-45D0-4530-B8B1-6C1A80F8FD2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09F70257-45D0-4530-B8B1-6C1A80F8FD2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09F70257-45D0-4530-B8B1-6C1A80F8FD2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53867BAD-17EA-431F-B27E-74F1D9FAF91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53867BAD-17EA-431F-B27E-74F1D9FAF91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53867BAD-17EA-431F-B27E-74F1D9FAF91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53867BAD-17EA-431F-B27E-74F1D9FAF91A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
