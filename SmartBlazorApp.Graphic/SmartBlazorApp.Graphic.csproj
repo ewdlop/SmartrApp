@@ -1,19 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.9" />
+    <PackageReference Include="SkiaSharp" Version="2.88.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\SmartBlazorApp.Client.csproj" />
     <ProjectReference Include="..\Shared\SmartBlazorApp.Shared.csproj" />
   </ItemGroup>
-
 
 </Project>
