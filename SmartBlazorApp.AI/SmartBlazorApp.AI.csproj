@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ONNX\bertsquad-12.onnx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ONNX\bertsquad-12.onnx" />
     <EmbeddedResource Include="vocab.txt" />
   </ItemGroup>
 
@@ -14,6 +19,7 @@
     <PackageReference Include="Microsoft.ML" Version="2.0.0-preview.22313.1" />
     <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.12.1" />
     <PackageReference Include="Microsoft.ML.OnnxRuntime.Gpu" Version="1.12.1" />
+    <PackageReference Include="Microsoft.ML.OnnxTransformer" Version="2.0.0-preview.22313.1" />
   </ItemGroup>
 
 </Project>
