@@ -1,30 +1,27 @@
 ﻿using SmartBlazorApp.AI.NLP.BERT.DataModel;
 using SmartBlazorApp.AI.NLP.BERT.Predictors;
 using SmartBlazorApp.AI.NLP.BERT.Tokenizers;
-using SmartBlazorApp.AI.NLP.BERT.Trainers;
 using SmartBlazorApp.AI.NLP.Extensions;
 using SmartBlazorApp.AI.NLP.Helpers;
 
 namespace SmartBlazorApp.AI.NLP.BERT;
 
 /// <summary>
-/// https://rubikscode.net/2021/04/19/machine-learning-with-ml-net-nlp-with-bert/
+/// <see href="https://rubikscode.net/2021/04/19/machine-learning-with-ml-net-nlp-with-bert/"></see>
+/// <para />
+/// <see href="https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/#:~:text=Since%20the%20ML%20model%20%28ITransformer%29%20object%20is%20thread-safe%2C,Injection%20usage%2C%20as%20shown%20in%20the%20code%20below%3A"></see>
 /// </summary>
 public class BidirectionalEncoderRepresentationsFromTransformers
 {
     private readonly List<string> _vocabulary;
-
     private readonly Tokenizer _tokenizer;
-    private readonly Predictor _predictor;
+    private readonly Predictor<BertInput, BertPredictions> _predictor;
 
-    public BidirectionalEncoderRepresentationsFromTransformers(string vocabularyFilePath, string bertModelPath)
+    public BidirectionalEncoderRepresentationsFromTransformers(List<string> vocabulary, string bertModelPath)
     {
-        _vocabulary = FileReader.ReadFile(vocabularyFilePath);
+        _vocabulary = vocabulary;
         _tokenizer = new Tokenizer(_vocabulary);
-
-        var trainer = new Trainer();
-        var trainedModel = trainer.BindAndTrains(bertModelPath, false);
-        _predictor = new Predictor(trainedModel);
+        _predictor = new Predictor<BertInput, BertPredictions>();
     }
 
     public (List<string> tokens, float probability) Predict(string context, string question)
