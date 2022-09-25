@@ -1,4 +1,6 @@
-﻿namespace SmartBlazorApp.AI.NLP.Helpers;
+﻿using System.Reflection;
+
+namespace SmartBlazorApp.AI.NLP.Helpers;
 
 public static class FileReader
 {
@@ -20,5 +22,13 @@ public static class FileReader
         }
 
         return result;
+    }
+
+    public static Stream? GetVocabularyStream()
+    {
+        string? vocabTextResourceStreamPath = Assembly.GetExecutingAssembly().GetManifestResourceNames()
+            .Where(s => s.Contains("vocab")).FirstOrDefault();
+        if (string.IsNullOrEmpty(vocabTextResourceStreamPath)) return null;
+        return Assembly.GetExecutingAssembly().GetManifestResourceStream(vocabTextResourceStreamPath);
     }
 }
